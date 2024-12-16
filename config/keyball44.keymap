@@ -7,13 +7,14 @@
 #define SNIPE   6
 
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 
 &lt {
-    tapping-term-ms = <240>;
+    tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <150>;
 };
@@ -25,6 +26,8 @@
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
+
+&sl { release-after-ms = <500>; };
 
 / {
     // custom shift using mod-morph 
@@ -47,38 +50,281 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        test2: test2 {
+            compatible = "zmk,behavior-sticky-key";
+            label = "TEST2";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <500>;
+        };
+
+        spacenum: spacenum {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACENUM";
+            bindings = <&mo>, <&SPACE_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        TYPING {
+            bindings = <&lt 2 SPACE>;
+            key-positions = <36 37>;
+            timeout-ms = <1000>;
+        };
+    };
+
+    macros {
+        SPACE_SL: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &sl 0>;
+            label = "NEW_MACRO";
+        };
+
+        Q_SL: Q_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &sl 0>;
+            label = "Q_SL";
+        };
+
+        W_SL: W_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &sl 0>;
+            label = "W_SL";
+        };
+
+        E_SL: E_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &sl 0>;
+            label = "E_SL";
+        };
+
+        R_SL: R_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &sl 0>;
+            label = "R_SL";
+        };
+
+        T_SL: T_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &sl 0>;
+            label = "T_SL";
+        };
+
+        A_SL: A_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &sl 0>;
+            label = "A_SL";
+        };
+
+        B_SL: B_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &sl 0>;
+            label = "B_SL";
+        };
+
+        C_SL: C_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &sl 0>;
+            label = "C_SL";
+        };
+
+        BK_SL: BK_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &sl 0>;
+            label = "BK_SL";
+        };
+
+        DEL_SL: DEL_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DELETE &sl 0>;
+            label = "DEL_SL";
+        };
+
+        J_SL: J_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &sl 0>;
+            label = "J_SL";
+        };
+
+        K_SL: K_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &sl 0>;
+            label = "K_SL";
+        };
+
+        L_SL: L_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &sl 0>;
+            label = "L_SL";
+        };
+
+        O_SL: O_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &sl 0>;
+            label = "O_SL";
+        };
+
+        P_SL: P_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &sl 0>;
+            label = "P_SL";
+        };
+
+        H_SL: H_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &sl 0>;
+            label = "H_SL";
+        };
+
+        U_SL: U_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &sl 0>;
+            label = "U_SL";
+        };
+
+        Y_SL: Y_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &sl 0>;
+            label = "Y_SL";
+        };
+
+        I_SL: I_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &sl 0>;
+            label = "I_SL";
+        };
+
+        S_SL: S_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &sl 0>;
+            label = "S_SL";
+        };
+
+        V_SL: V_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &sl 0>;
+            label = "V_SL";
+        };
+
+        M_SL: M_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &sl 0>;
+            label = "M_SL";
+        };
+
+        N_SL: N_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &sl 0>;
+            label = "N_SL";
+        };
+
+        D_SL: D_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &sl 0>;
+            label = "D_SL";
+        };
+
+        F_SL: F_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &sl 0>;
+            label = "F_SL";
+        };
+
+        G_SL: G_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &sl 0>;
+            label = "G_SL";
+        };
+
+        Z_SL: Z_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &sl 0>;
+            label = "Z_SL";
+        };
+
+        X_SL: X_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp X &sl 0>;
+            label = "X_SL";
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "QWRT";
+            label = "MOS+QWRT";
             bindings = <
-&kp ESCAPE      &kp Q     &kp W         &kp E        &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&kp LCTRL       &kp A     &kp S         &kp D        &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LEFT_SHIFT  &kp Z     &kp X         &kp C        &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-&kp LGUI        &kp LALT  &lt 6 ESCAPE  &lt 4 SPACE  &lt 5 TAB             &kp ENTER  &lt 2 BACKSPACE                                        &kp DELETE
+&kp ESC    &Q_SL      &W_SL         &E_SL      &R_SL        &T_SL                   &Y_SL        &U_SL  &I_SL      &O_SL    &P_SL      &kp BACKSPACE
+&lt 2 TAB  &A_SL      &S_SL         &D_SL      &F_SL        &G_SL                   &H_SL        &J_SL  &K_SL      &L_SL    &kp SEMI   &DEL_SL
+&kp LSHFT  &Z_SL      &X_SL         &C_SL      &V_SL        &B_SL                   &N_SL        &M_SL  &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
+&kp LGUI   &kp LCTRL  &kp LEFT_ALT  &SPACE_SL  &lt 5 SPACE             &lt 4 SPACE  &lt 3 SPACE                                        &lt 6 CAPSLOCK
             >;
+        };
+
+        MIX_LAYER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                        &trans
+            >;
+
+            label = "MIX-TYPE";
         };
 
         number_layer {
             label = "NUM";
             bindings = <
-&none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
-&none   &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &none                     &none         &none         &none         &none         &none         &none
-&none   &none         &none         &none         &none         &none                     &none         &none         &trans        &trans        &none         &none
-&trans  &trans        &trans        &trans        &trans                          &trans  &trans                                                                &trans
+&trans  &none     &kp UP    &none      &none   &none              &kp PLUS   &kp N7  &kp N8  &kp N9  &kp STAR    &trans
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none              &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH    &trans
+&trans  &none     &none     &none      &none   &none              &kp N0     &kp N1  &kp N2  &kp N3  &kp PERIOD  &trans
+&trans  &trans    &trans    &trans     &trans             &trans  &kp N0                                         &trans
             >;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&none   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT              &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &bootloader
-&none   &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                   &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT                &none
-&none   &trans           &trans        &trans        &trans        &trans                   &kp UNDERSCORE  &kp PLUS       &trans            &trans                &kp NON_US_BACKSLASH   &none
-&trans  &trans           &trans        &trans        &trans                         &trans  &trans                                                                                        &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT               &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &bootloader
+&trans     &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &out OUT_TOG              &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT                &none
+&trans     &trans           &trans        &trans        &trans        &none                     &kp UNDERSCORE  &kp PLUS       &kp PIPE          &trans                &kp NON_US_BACKSLASH   &none
+&trans     &trans           &trans        &trans        &trans                          &trans  &trans                                                                                        &trans
             >;
         };
 
@@ -88,27 +334,17 @@
 &none   &kp F1  &kp F2   &kp F3   &kp F4   &none              &none  &none  &none  &none  &none  &none
 &none   &kp F5  &kp F6   &kp F7   &kp F8   &none              &none  &none  &none  &none  &none  &none
 &none   &kp F9  &kp F10  &kp F11  &kp F12  &none              &none  &none  &none  &none  &none  &none
-&trans  &trans  &trans   &trans   &trans              &trans  &mo 3                              &trans
-            >;
-        };
-
-        mouse_layer {
-            label = "MOUSE";
-            bindings = <
-&none   &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                 &kp N6         &kp N7     &kp N8  &kp N9     &kp N0     &none
-&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                  &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK  &none
-&none   &none           &none           &none         &none      &none                  &kp PAGE_DOWN  &none      &none   &none      &none      &none
-&trans  &trans          &trans          &trans        &trans                 &mkp RCLK  &mkp LCLK                                               &none
+&trans  &trans  &trans   &trans   &trans              &trans  &mo 4                              &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &kp HOME  &kp PG_UP  &kp UP    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans    &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &kp END   &kp PG_DN  &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                            &trans
             >;
         };
 
@@ -119,6 +355,16 @@
 &trans       &trans  &trans  &trans  &trans  &trans                 &trans     &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans                 &trans     &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans              &mkp RCLK  &mkp LCLK                                  &trans
+            >;
+        };
+
+        FULL_TYPE {
+            label = "ALL";
+            bindings = <
+&kp TAB           &kp Q       &kp W         &kp E      &kp R         &kp T                   &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
+&kp LEFT_SHIFT    &kp A       &kp S         &kp D      &kp F         &kp G                   &kp H        &kp J  &kp K      &kp L    &kp SEMI   &kp DEL
+&kp LEFT_CONTROL  &kp Z       &kp X         &kp C      &kp V         &kp B                   &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RET
+&kp LGUI          &lt 2 HOME  &kp LEFT_ALT  &SPACE_SL  &lt 5 ESCAPE             &lt 4 SPACE  &lt 3 SPACE                                        &kp SQT
             >;
         };
     };
