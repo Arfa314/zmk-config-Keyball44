@@ -84,7 +84,7 @@
         SPACE_SL: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &sl 0>;
+            bindings = <&kp SPACE &sl 1>;
             label = "NEW_MACRO";
         };
 
