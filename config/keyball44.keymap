@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -300,12 +301,12 @@
         TRANS_LAYER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &J_SL   &K_SL   &L_SL   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp J   &kp K   &kp L   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
             >;
 
-            label = "MIX-TYPE";
+            label = "QWRT-TYPE";
         };
 
         number_layer {
