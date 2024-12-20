@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -66,6 +67,16 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        new_space: new_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_SPACE";
+            bindings = <&mo>, <&SPACE_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
         };
     };
 
@@ -290,10 +301,10 @@
         default_layer {
             label = "MOS+TYPE";
             bindings = <
-&kp ESC    &Q_SL      &W_SL         &E_SL        &R_SL        &T_SL                   &Y_SL        &U_SL      &I_SL      &O_SL      &P_SL      &kp BACKSPACE
-&lt 2 TAB  &A_SL      &S_SL         &D_SL        &F_SL        &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMI   &DEL_SL
-&kp LSHFT  &Z_SL      &X_SL         &C_SL        &V_SL        &B_SL                   &N_SL        &M_SL      &kp COMMA  &kp DOT    &kp SLASH  &kp RIGHT_SHIFT
-&kp LGUI   &kp LCTRL  &kp LEFT_ALT  &lt 7 SPACE  &lt 5 SPACE             &lt 4 SPACE  &lt 3 SPACE                                              &lt 6 KP_ENTER
+&kp ESC    &Q_SL      &W_SL         &E_SL           &R_SL        &T_SL                   &Y_SL        &U_SL      &I_SL      &O_SL      &P_SL      &kp BACKSPACE
+&lt 2 TAB  &A_SL      &S_SL         &D_SL           &F_SL        &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMI   &DEL_SL
+&kp LSHFT  &Z_SL      &X_SL         &C_SL           &V_SL        &B_SL                   &N_SL        &M_SL      &kp COMMA  &kp DOT    &kp SLASH  &kp RIGHT_SHIFT
+&kp LGUI   &kp LCTRL  &kp LEFT_ALT  &new_space 7 0  &lt 5 SPACE             &lt 4 SPACE  &lt 3 SPACE                                              &lt 6 KP_ENTER
             >;
         };
 
