@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -95,6 +96,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &sl 1>;
             label = "NEW_MACRO";
+            wait-ms = <100>;
         };
 
         Q_SL: Q_SL {
