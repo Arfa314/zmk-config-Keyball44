@@ -39,7 +39,7 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-space$$', h: TYPING_ONLY}
+  - {t: '&SPACE_SL', h: TYPING_ONLY}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
   - {t: '$$mdi:keyboard-space$$', h: FUN}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
