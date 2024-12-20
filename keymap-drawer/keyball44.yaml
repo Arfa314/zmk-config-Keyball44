@@ -362,3 +362,9 @@ layers:
 combos:
 - p: [36, 37]
   k: {t: '$$mdi:keyboard-space$$', h: NUM}
+- p: [39, 19]
+  k: '&J_SL'
+- p: [39, 20]
+  k: '&K_SL'
+- p: [39, 21]
+  k: '&L_SL'

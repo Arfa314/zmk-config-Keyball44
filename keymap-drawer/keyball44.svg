@@ -521,6 +521,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 370)" class="layer-QWRT-TYPE">
@@ -752,6 +770,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 740)" class="layer-NUM">
@@ -993,6 +1029,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1110)" class="layer-SYM">
@@ -1230,6 +1284,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1480)" class="layer-FUN">
@@ -1460,6 +1532,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1850)" class="layer-SCROLL">
@@ -1694,6 +1784,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2220)" class="layer-SNIPE">
@@ -1927,6 +2035,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2589)" class="layer-TYPING_ONLY">
@@ -2161,6 +2287,24 @@ rect.held, rect.combo.held {
 <a href="#NUM">
 <text x="168" y="214" class="combo hold layer-activator">NUM</text>
 </a></g>
+<g class="combo combopos-1">
+<path d="M456,176 l-116,71" class="combo"/>
+<path d="M456,176 l116,-71" class="combo"/>
+<rect rx="6" ry="6" x="442" y="163" width="28" height="26" class="combo"/>
+<text x="456" y="176" class="combo tap">&amp;J_SL</text>
+</g>
+<g class="combo combopos-2">
+<path d="M484,170 l-143,77" class="combo"/>
+<path d="M484,170 l143,-77" class="combo"/>
+<rect rx="6" ry="6" x="470" y="157" width="28" height="26" class="combo"/>
+<text x="484" y="170" class="combo tap">&amp;K_SL</text>
+</g>
+<g class="combo combopos-3">
+<path d="M512,177 l-171,72" class="combo"/>
+<path d="M512,177 l171,-72" class="combo"/>
+<rect rx="6" ry="6" x="498" y="164" width="28" height="26" class="combo"/>
+<text x="512" y="177" class="combo tap">&amp;L_SL</text>
+</g>
 </g>
 </g>
 </svg>
