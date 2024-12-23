@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -185,21 +186,21 @@
         J_SL: J_SL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp J &sl 7>;
+            bindings = <&kp J &sl 1>;
             label = "J_SL";
         };
 
         K_SL: K_SL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K &sl 7>;
+            bindings = <&kp K &sl 1>;
             label = "K_SL";
         };
 
         L_SL: L_SL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp L &sl 7>;
+            bindings = <&kp L &sl 1>;
             label = "L_SL";
         };
 
