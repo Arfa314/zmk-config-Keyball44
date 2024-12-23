@@ -109,10 +109,8 @@
         SPACE_SL: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp SPACE &sl 1>;
+            bindings = <&macro_release &kp SPACE &sl 1>;
             label = "NEW_MACRO";
-            tap-ms = <10>;
-            wait-ms = <(-200)>;
         };
 
         Q_SL: Q_SL {
