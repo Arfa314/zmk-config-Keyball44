@@ -39,7 +39,7 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - '&SPACE_SL'
+  - {t: '&SPACE_SL', h: TYPING_ONLY}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
   - {t: '$$mdi:keyboard-space$$', h: FUN}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
@@ -354,7 +354,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
