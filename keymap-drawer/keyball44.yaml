@@ -27,12 +27,12 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - '&Z_SL'
   - '&X_SL'
+  - {t: ',', s: <}
   - '&C_SL'
   - '&V_SL'
   - '&B_SL'
   - '&N_SL'
   - '&M_SL'
-  - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
@@ -342,12 +342,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
   - X
+  - {t: ',', s: <}
   - C
   - V
   - B
   - N
   - M
-  - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
