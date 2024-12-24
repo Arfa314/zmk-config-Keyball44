@@ -24,10 +24,10 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - {t: ;, s: ':'}
   - '&DEL_SL'
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - '&Z_SL'
   - '&X_SL'
-  - {t: ',', s: <}
   - '&C_SL'
   - '&V_SL'
   - '&B_SL'
@@ -37,8 +37,8 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:apple-keyboard-option$$', h: TYPING_ONLY}
+  - {t: ',', s: <}
   - {t: '&SPACE_SL', h: TYPING_ONLY}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
   - {t: '$$mdi:keyboard-space$$', h: FUN}
@@ -340,9 +340,9 @@ layers:
   - {t: ;, s: ':'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - Z
   - X
-  - {t: ',', s: <}
   - C
   - V
   - B
@@ -352,9 +352,9 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
