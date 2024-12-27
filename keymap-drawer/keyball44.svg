@@ -552,9 +552,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -812,9 +813,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -1084,9 +1086,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -1350,9 +1353,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -1609,9 +1613,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -1872,9 +1877,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -2134,9 +2140,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>
@@ -2396,9 +2403,10 @@ rect.held, rect.combo.held {
 <path d="M441,275 l-40,-1" class="combo"/>
 <path d="M441,275 l40,1" class="combo"/>
 <rect rx="6" ry="6" x="427" y="262" width="28" height="26" class="combo"/>
-<a href="#TYPING_ONLY">
-<text x="441" y="275" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="441" y="286" class="combo hold">toggle</text>
+<text x="441" y="275" class="combo tap">
+<tspan x="441" dy="-0.6em">QWRT-</tspan><tspan x="441" dy="1.2em">TYPE</tspan>
+</text>
+<text x="441" y="286" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M469,264 l-69,7" class="combo"/>

@@ -367,6 +367,6 @@ combos:
 - p: [39, 21]
   k: '&L_SL'
 - p: [40, 41]
-  k: {t: TYPING_ONLY, h: toggle}
+  k: {t: QWRT-TYPE, h: toggle}
 - p: [40, 42]
   k: {t: MOS+TYPE, h: toggle}
