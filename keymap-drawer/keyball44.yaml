@@ -183,9 +183,9 @@ layers:
   - $$mdi:progress-download$$
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
-  - MUTE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-off$$
+  - $$mdi:brightness-7$$
+  - $$mdi:brightness-5$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F7
   - F8
