@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -100,7 +101,7 @@
 
         TypingMode {
             bindings = <&tog 2>;
-            key-positions = <40 42>;
+            key-positions = <42 38>;
         };
     };
 
@@ -394,12 +395,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        test {
-            if-layers = <0 1>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
