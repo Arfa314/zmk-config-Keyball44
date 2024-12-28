@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -98,13 +99,8 @@
             key-positions = <39 21>;
         };
 
-        typingmode {
-            bindings = <&to 1>;
-            key-positions = <40 41>;
-        };
-
-        normalmode {
-            bindings = <&to 0>;
+        TypingMode {
+            bindings = <&tog 2>;
             key-positions = <40 42>;
         };
     };
@@ -321,9 +317,9 @@
             label = "MOS+TYPE";
             bindings = <
 &kp ESC           &Q_SL           &W_SL         &E_SL      &R_SL        &T_SL                   &Y_SL        &U_SL      &I_SL      &O_SL      &P_SL      &kp BACKSPACE
-&lt 2 TAB         &A_SL           &S_SL         &D_SL      &F_SL        &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMI   &DEL_SL
+&lt 3 TAB         &A_SL           &S_SL         &D_SL      &F_SL        &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMI   &kp DEL
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL      &C_SL        &V_SL                   &B_SL        &N_SL      &M_SL      &kp DOT    &kp SLASH  &kp RIGHT_SHIFT
-&kp LGUI          &lt 7 COMMA     &kp LEFT_ALT  &SPACE_SL  &lt 5 SPACE             &lt 4 SPACE  &lt 3 SPACE                                              &lt 6 KP_ENTER
+&kp LGUI          &lt 2 COMMA     &kp LEFT_ALT  &SPACE_SL  &lt 6 SPACE             &lt 5 SPACE  &lt 4 SPACE                                              &lt 7 KP_ENTER
             >;
         };
 
@@ -336,6 +332,16 @@
             >;
 
             label = "QWRT-TYPE";
+        };
+
+        FULL_TYPE {
+            label = "TYPING_ONLY";
+            bindings = <
+&trans  &kp Q   &kp W   &kp E   &kp R   &kp T              &kp Y   &kp U  &kp I  &kp O    &kp P      &trans
+&trans  &kp A   &kp S   &kp D   &kp F   &kp G              &kp H   &kp J  &kp K  &kp L    &kp SEMI   &trans
+&trans  &trans  &kp Z   &kp X   &kp C   &kp V              &kp B   &kp N  &kp M  &kp DOT  &kp SLASH  &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans                                    &trans
+            >;
         };
 
         number_layer {
@@ -387,16 +393,6 @@
 &trans       &trans  &trans        &trans        &trans                    &trans  &trans                                           &trans
             >;
         };
-
-        FULL_TYPE {
-            label = "TYPING_ONLY";
-            bindings = <
-&trans  &kp Q   &kp W   &kp E   &kp R   &kp T              &kp Y   &kp U  &kp I  &kp O    &kp P      &kp BACKSPACE
-&trans  &kp A   &kp S   &kp D   &kp F   &kp G              &kp H   &kp J  &kp K  &kp L    &kp SEMI   &kp DELETE
-&trans  &trans  &kp Z   &kp X   &kp C   &kp V              &kp B   &kp N  &kp M  &kp DOT  &kp SLASH  &trans
-&trans  &trans  &trans  &trans  &trans             &trans  &trans                                    &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -404,7 +400,7 @@
 
         test {
             if-layers = <0 1>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 };
