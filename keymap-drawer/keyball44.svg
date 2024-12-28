@@ -549,12 +549,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -800,12 +800,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1053,12 +1053,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1316,12 +1316,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1573,12 +1573,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1823,12 +1823,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -2077,12 +2077,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -2330,12 +2330,12 @@ rect.held, rect.combo.held {
 <text x="512" y="177" class="combo tap">&amp;L_SL</text>
 </g>
 <g class="combo combopos-3">
-<path d="M469,264 l-69,7" class="combo"/>
-<path d="M469,264 l69,-7" class="combo"/>
-<rect rx="6" ry="6" x="455" y="251" width="28" height="26" class="combo"/>
+<path d="M411,253 l127,1" class="combo"/>
+<path d="M411,253 l-127,-1" class="combo"/>
+<rect rx="6" ry="6" x="397" y="240" width="28" height="26" class="combo"/>
 <a href="#TYPING_ONLY">
-<text x="469" y="264" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
-</a><text x="469" y="275" class="combo hold">toggle</text>
+<text x="411" y="253" class="combo tap layer-activator"><tspan style="font-size: 60%">TYPING_ON…</tspan></text>
+</a><text x="411" y="264" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
