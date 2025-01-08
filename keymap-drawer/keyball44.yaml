@@ -36,7 +36,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: TYPING_ONLY, h: '&lt 2'}
+  - '&shiftkeyboard'
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
   - '&SPACE_SL'
