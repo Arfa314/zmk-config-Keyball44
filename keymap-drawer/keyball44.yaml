@@ -39,7 +39,7 @@ layers:
   - '&shiftkeyboard'
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
-  - '&SPACE_SL'
+  - {t: TYPING_ONLY, h: '&lt 2'}
   - '&doubleL5'
   - {t: '$$mdi:keyboard-space$$', h: FUN}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
@@ -129,7 +129,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
