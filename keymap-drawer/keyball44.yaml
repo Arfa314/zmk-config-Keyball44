@@ -329,7 +329,7 @@ layers:
   - )
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -348,8 +348,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
   - +
-  - '|'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - <
+  - '>'
   - \
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
