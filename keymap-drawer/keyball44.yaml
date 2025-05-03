@@ -406,12 +406,6 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [39, 19]
-  k: '&J_SL'
-- p: [39, 20]
-  k: '&K_SL'
-- p: [39, 21]
-  k: '&L_SL'
 - p: [42, 38]
   k: {t: TYPING_ONLY, h: toggle}
 - p: [43, 41]
