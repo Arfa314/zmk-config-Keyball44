@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt { flavor = "balanced"; };
 
@@ -334,7 +335,7 @@
 &kp ESC           &Q_SL           &W_SL         &E_SL        &R_SL      &T_SL                   &Y_SL        &U_SL      &I_SL      &O_SL      &P_SL          &kp BACKSPACE
 &lt 8 TAB         &A_SL           &S_SL         &D_SL        &F_SL      &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMICOLON  &kp DEL
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL        &C_SL      &V_SL                   &B_SL        &N_SL      &M_SL      &kp DOT    &kp SLASH      &kp RIGHT_SHIFT
-&shiftkeyboard    &kp LEFT_WIN    &kp LEFT_ALT  &lt 1 SPACE  &doubleL5             &lt 4 SPACE  &lt 7 SPACE                                                  &lt 6 KP_ENTER
+&tog 2            &kp LEFT_WIN    &kp LEFT_ALT  &lt 1 SPACE  &doubleL5             &lt 4 SPACE  &lt 7 SPACE                                                  &lt 6 KP_ENTER
             >;
         };
 
@@ -361,10 +362,10 @@
 
         onehandmode {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &lt 5 PERIOD  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans        &trans
-&trans  &trans  &trans  &trans  &trans              &lt 8 SPACE  &trans                                        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans     &trans     &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &lt 5 PERIOD  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans     &trans     &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans              &lt 8 SPACE  &trans                                                 &trans
             >;
 
             label = "onehandmode";
