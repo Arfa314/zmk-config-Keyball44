@@ -1,5 +1,52 @@
+name: Build Keyball44 Firmware
+
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache west modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-zephyr-modules
+        with:
+          path: |
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+
+      - name: Initialize workspace (West Init)
+        uses: zmkfirmware/zmk-actions-env@v2
+        with:
+          container: 'zmkfirmware/zmk-build-arm:stable'
+
+      - name: West Init & Update
+        run: |
+          west init -l config
+          west update
+          west zephyr-export
+
+      - name: Build Left Side
+        run: |
+          west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=keyball44_left -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
+
+      - name: Build Right Side
+        run: |
+          west build -d build/right -s zmk/app -b nice_nano_v2 -- -DSHIELD=keyball44_right -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
+
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Keyball44_Firmware
+          path: |
+            build/zephyr/zmk.uf2
+            build/right/zephyr/zmk.uf2
