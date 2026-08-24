@@ -111,35 +111,89 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN>, <&tog 2>;
         };
+
+        // Thumb space: hold = momentary layer, tap = SPACE + arm &sl 1.
+        // tap-preferred so a fast letter after the space can never steal the
+        // space and drop you onto the hold layer instead.
+        //
+        // Deliberately NO quick-tap-ms here: quick-tap forces a second tap when
+        // you re-press within the window, which would turn "space, then hold for
+        // SYM" into two spaces -- i.e. it would break typing "a && b".
+
+        spc_lt: spc_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPC_LT";
+            bindings = <&mo>, <&SPACE_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        // Same, but taps KP_ENTER + arms &sl 1.
+
+        ent_lt: ent_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENT_LT";
+            bindings = <&mo>, <&ENTER_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        // Backspace / Delete: tap = key + arm &sl 1, hold = plain &kp so the
+        // OS auto-repeat still works (a bare macro would kill hold-to-repeat).
+        // No quick-tap-ms, so tap-then-hold still reaches the repeating hold.
+
+        rep_ht: rep_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REP_HT";
+            bindings = <&kp>, <&BK_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        del_ht: del_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DEL_HT";
+            bindings = <&kp>, <&DEL_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
+        // `layers` keeps these off SYM / NUM / FUN / SCROLL / SNIPE. ZMK matches
+        // against the *highest* active layer, so every layer you may toggle
+        // from has to be listed here.
+
         TypingMode {
             bindings = <&tog 2>;
             key-positions = <42 38>;
+            layers = <0 1 2 3 9>;
+            timeout-ms = <40>;
         };
 
         onehandmode {
             bindings = <&tog 3>;
             key-positions = <43 41>;
+            layers = <0 1 2 3 9>;
+            timeout-ms = <30>;
         };
 
-        Mouse_J {
-            bindings = <&kp J>;
-            key-positions = <39 19>;
-        };
-
-        Mouse_K {
-            bindings = <&kp K>;
-            key-positions = <39 20>;
-        };
-
-        Mouse_L {
-            bindings = <&kp L>;
-            key-positions = <39 21>;
-        };
+        // NOTE: &bootloader must NOT be put on a combo. It is
+        // BEHAVIOR_LOCALITY_EVENT_SOURCE (it resets the half the key physically
+        // lives on), but combos invoke their binding with a *virtual* key
+        // position, which bypasses split routing -- a combo'd &bootloader can
+        // only ever reset the central (right) half. Left-half reset therefore
+        // has to stay a plain binding on a left-half key. See the RESET layer.
     };
 
     macros {
@@ -345,6 +399,44 @@
             bindings = <&kp X &sl 1>;
             label = "X_SL";
         };
+
+        // Non-letter keys that occur inside a typing flow must arm &sl 1 too,
+        // otherwise the next j/k/l falls through to layer 0 and clicks.
+
+        ESC_SL: ESC_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &sl 1>;
+            label = "ESC_SL";
+        };
+
+        SEMI_SL: SEMI_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON &sl 1>;
+            label = "SEMI_SL";
+        };
+
+        DOT_SL: DOT_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &sl 1>;
+            label = "DOT_SL";
+        };
+
+        SLASH_SL: SLASH_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH &sl 1>;
+            label = "SLASH_SL";
+        };
+
+        ENTER_SL: ENTER_SL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_ENTER &sl 1>;
+            label = "ENTER_SL";
+        };
     };
 
     keymap {
@@ -353,10 +445,10 @@
         default_layer {
             label = "MOS+TYPE";
             bindings = <
-&kp ESC           &Q_SL           &W_SL         &E_SL        &R_SL        &T_SL                   &Y_SL        &U_SL      &I_SL      &O_SL      &P_SL          &kp BACKSPACE
-&lt 8 TAB         &A_SL           &S_SL         &D_SL        &F_SL        &G_SL                   &H_SL        &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMICOLON  &kp DEL
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL        &C_SL        &V_SL                   &B_SL        &N_SL      &M_SL      &kp DOT    &kp SLASH      &kp RIGHT_SHIFT
-&full_type_mode   &kp LEFT_WIN    &kp LEFT_ALT  &lt 1 SPACE  &lt 5 SPACE             &lt 4 SPACE  &lt 7 SPACE                                                  &lt 6 KP_ENTER
+&ESC_SL           &Q_SL           &W_SL         &E_SL          &R_SL          &T_SL                     &Y_SL          &U_SL      &I_SL      &O_SL      &P_SL     &rep_ht BACKSPACE 0
+&lt 8 TAB         &A_SL           &S_SL         &D_SL          &F_SL          &G_SL                     &H_SL          &mkp LCLK  &mkp MCLK  &mkp RCLK  &SEMI_SL  &del_ht DEL 0
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL          &C_SL          &V_SL                     &B_SL          &N_SL      &M_SL      &DOT_SL    &SLASH_SL &kp RIGHT_SHIFT
+&full_type_mode   &kp LEFT_WIN    &kp LEFT_ALT  &spc_lt 9 0    &spc_lt 5 0               &spc_lt 4 0    &spc_lt 7 0                                                &ent_lt 6 0
             >;
         };
 
@@ -395,10 +487,10 @@
         function_layer {
             label = "FUN";
             bindings = <
-&bootloader  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC              &kp INSERT  &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC              &kp INSERT  &kp F7  &kp F8  &kp F9  &kp F10  &none
 &kp CAPS     &none              &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2          &out OUT_TOG                      &none       &kp F4  &kp F5  &kp F6  &kp F11  &none
 &none        &none              &none            &none         &none                 &none                             &none       &kp F1  &kp F2  &kp F3  &kp F12  &none
-&bt BT_CLR   &trans             &trans           &trans        &trans                                          &trans  &trans                                       &trans
+&none        &trans             &trans           &trans        &trans                                          &trans  &trans                                       &trans
             >;
         };
 
@@ -415,8 +507,8 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&bootloader  &trans  &trans        &trans        &trans        &trans              &trans  &trans     &trans     &trans     &trans  &bootloader
-&trans       &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans              &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans       &trans  &trans        &trans        &trans        &trans              &trans  &trans     &trans     &trans     &trans  &trans
+&trans       &trans  &trans        &trans        &trans        &trans              &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
 &trans       &trans  &trans        &trans        &trans        &trans              &trans  &trans     &trans     &trans     &trans  &trans
 &trans       &trans  &trans        &trans        &trans                    &trans  &trans                                           &trans
             >;
@@ -426,7 +518,7 @@
             label = "SYM";
             bindings = <
 &kp TILDE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT               &kp CARET       &kp LS(NUMBER_7)  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &out OUT_TOG              &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
+&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none                     &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
 &trans     &trans            &trans             &trans          &trans           &kp PIPE                  &kp UNDERSCORE  &kp PLUS          &kp LESS_THAN     &kp GREATER_THAN      &kp NON_US_BACKSLASH   &trans
 &trans     &trans            &trans             &trans          &trans                             &trans  &trans                                                                                           &trans
             >;
@@ -441,7 +533,48 @@
 &trans  &trans  &trans  &trans  &trans              &trans  &kp N0                                             &trans
             >;
         };
+
+        // Identical to TRANS_LAYER, but reached by *holding* the left thumb
+        // space. It has to be a separate index: ZMK layer state is a plain
+        // bitmask with no refcount, so if the hold and the sticky key both
+        // targeted layer 1 the sticky's release would switch the layer off
+        // underneath the held key.
+
+        MOUSE_OFF {
+            label = "HOLD-TYPE";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &J_SL   &K_SL   &L_SL   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+            >;
+        };
+
+        // Reached only by holding BOTH inner thumbs (pos 40 -> SCROLL and
+        // pos 41 -> FUN) for 150ms, via the conditional layer below.
+        //
+        // Esc (pos 0) is on the LEFT half and Backspace (pos 11) on the RIGHT,
+        // so each one resets its own side -- &bootloader runs on the half the
+        // key physically belongs to. BT_CLR is central-locality, so its
+        // position does not matter.
+
+        RESET {
+            label = "RESET";
+            bindings = <
+&bootloader  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+            >;
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        reset_layer {
+            if-layers = <4 5>;
+            then-layer = <10>;
+        };
+    };
 };
