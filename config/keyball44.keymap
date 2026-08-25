@@ -130,6 +130,22 @@
             flavor = "tap-preferred";
         };
 
+        // SYM thumb only. hold-preferred, NOT tap-preferred: the hold commits
+        // the moment a second key goes down, so a fast same-hand roll like
+        // SYM+U cannot lose the race by releasing the thumb first. Symbols are
+        // typed deliberately, so instant layer access matters more here than
+        // guaranteeing the space -- and there are three other space thumbs.
+
+        sym_lt: sym_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYM_LT";
+            bindings = <&mo>, <&SPACE_SL>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "hold-preferred";
+        };
+
         // Same, but taps KP_ENTER + arms &sl 1.
 
         ent_lt: ent_lt {
@@ -421,10 +437,10 @@
             label = "ENTER_SL";
         };
 
-        // DIAGNOSTIC (temporary): types & the way a human does -- shift down,
-        // pause, tap 7, pause, shift up -- instead of &kp LS(N7), which puts
-        // the modifier and the key in a single HID report. If this works where
-        // &kp LS(NUMBER_7) does not, the problem is report timing on the host.
+        // Types & the way a hand does it -- shift down, pause, tap 7, pause,
+        // shift up -- instead of &kp LS(N7), which puts the modifier and the
+        // key into a single HID report. Sits on SYM position 7 (the U key),
+        // where plain &kp LS(NUMBER_7) produced nothing.
 
         AMP: AMP {
             compatible = "zmk,behavior-macro";
@@ -449,7 +465,7 @@
 &kp ESC           &Q_SL           &W_SL         &E_SL          &R_SL          &T_SL                     &Y_SL          &U_SL      &I_SL      &O_SL      &P_SL     &kp BACKSPACE
 &lt 8 TAB         &A_SL           &S_SL         &D_SL          &F_SL          &G_SL                     &H_SL          &mkp LCLK  &mkp MCLK  &mkp RCLK  &SEMI_SL  &kp DEL
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL          &C_SL          &V_SL                     &B_SL          &N_SL      &M_SL      &DOT_SL    &SLASH_SL &kp RIGHT_SHIFT
-&full_type_mode   &kp LEFT_WIN    &kp LEFT_ALT  &spc_lt 9 0    &spc_lt 5 0               &spc_lt 4 0    &spc_lt 7 0                                                &ent_lt 6 0
+&full_type_mode   &kp LEFT_WIN    &kp LEFT_ALT  &spc_lt 9 0    &spc_lt 5 0               &spc_lt 4 0    &sym_lt 7 0                                                &ent_lt 6 0
             >;
         };
 
@@ -518,8 +534,8 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT               &kp CARET       &kp LS(NUMBER_7)  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(NUMBER_7)
-&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &AMP                      &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
+&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT               &kp CARET       &AMP              &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(NUMBER_7)
+&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none                     &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
 &trans     &trans            &trans             &trans          &trans           &kp PIPE                  &kp UNDERSCORE  &kp PLUS          &kp LESS_THAN     &kp GREATER_THAN      &kp NON_US_BACKSLASH   &trans
 &trans     &trans            &trans             &trans          &trans                             &trans  &trans                                                                                           &trans
             >;
