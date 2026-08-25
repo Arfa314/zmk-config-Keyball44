@@ -420,6 +420,24 @@
             bindings = <&kp KP_ENTER &sl 1>;
             label = "ENTER_SL";
         };
+
+        // DIAGNOSTIC (temporary): types & the way a human does -- shift down,
+        // pause, tap 7, pause, shift up -- instead of &kp LS(N7), which puts
+        // the modifier and the key in a single HID report. If this works where
+        // &kp LS(NUMBER_7) does not, the problem is report timing on the host.
+
+        AMP: AMP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "AMP";
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_wait_time 30>
+                , <&macro_tap_time 30>
+                , <&macro_tap &kp N7>
+                , <&macro_wait_time 30>
+                , <&macro_release &kp LSHFT>;
+        };
     };
 
     keymap {
@@ -500,8 +518,8 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT               &kp CARET       &kp LS(NUMBER_7)  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none                     &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
+&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT               &kp CARET       &kp LS(NUMBER_7)  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(NUMBER_7)
+&trans     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE  &AMP                      &kp MINUS       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp COMMA              &trans
 &trans     &trans            &trans             &trans          &trans           &kp PIPE                  &kp UNDERSCORE  &kp PLUS          &kp LESS_THAN     &kp GREATER_THAN      &kp NON_US_BACKSLASH   &trans
 &trans     &trans            &trans             &trans          &trans                             &trans  &trans                                                                                           &trans
             >;
@@ -533,20 +551,28 @@
             >;
         };
 
-        // Reached only by holding BOTH inner thumbs (pos 40 -> SCROLL and
-        // pos 41 -> FUN) for 150ms, via the conditional layer below.
+        // Reached by holding the inner two RIGHT thumbs (pos 41 -> FUN and
+        // pos 42 -> SYM) for 150ms, via the conditional layer at the bottom.
         //
         // Esc (pos 0) is on the LEFT half and Backspace (pos 11) on the RIGHT,
         // so each one resets its own side -- &bootloader runs on the half the
-        // key physically belongs to. BT_CLR is central-locality, so its
-        // position does not matter.
+        // key physically belongs to. Because both trigger thumbs are right-half
+        // keys, the RIGHT bootloader needs nothing from the left half.
+        //
+        // The LEFT bootloader cannot be made independent: a ZMK peripheral does
+        // not run the keymap at all, so any keyboard-driven reset of the left
+        // half needs the right half alive to resolve the binding and route it.
+        // If the right half is dead, the left half's only reset is the physical
+        // button under the OLED cover.
+        //
+        // BT_CLR is central-locality, so it is put on the right half too.
 
         RESET {
             label = "RESET";
             bindings = <
 &bootloader  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &bootloader
 &trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR   &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans              &bt BT_CLR  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
             >;
         };
@@ -555,8 +581,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
+        // Both trigger layers are on the RIGHT half on purpose (pos 41 = FUN,
+        // pos 42 = SYM). The right half is the central and runs standalone, so
+        // its bootloader must never depend on the left half being alive.
+
         reset_layer {
-            if-layers = <4 5>;
+            if-layers = <4 7>;
             then-layer = <10>;
         };
     };
