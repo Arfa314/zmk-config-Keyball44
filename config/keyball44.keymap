@@ -142,29 +142,12 @@
             flavor = "tap-preferred";
         };
 
-        // Backspace / Delete: tap = key + arm &sl 1, hold = plain &kp so the
-        // OS auto-repeat still works (a bare macro would kill hold-to-repeat).
-        // No quick-tap-ms, so tap-then-hold still reaches the repeating hold.
-
-        rep_ht: rep_ht {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REP_HT";
-            bindings = <&kp>, <&BK_SL>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        del_ht: del_ht {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DEL_HT";
-            bindings = <&kp>, <&DEL_SL>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
+        // Esc / Backspace / Delete are deliberately plain &kp, NOT _SL macros
+        // and not hold-taps: they fire on press (no hold-tap release latency),
+        // they get native OS auto-repeat, and they do not arm &sl 1 -- so you
+        // stay on layer 0 and the mouse buttons are live straight after them.
+        // Trade-off: typing j/k/l immediately after one of these will click.
+        // ESC_SL / BK_SL / DEL_SL are kept below if you want to swap back.
     };
 
     combos {
@@ -445,8 +428,8 @@
         default_layer {
             label = "MOS+TYPE";
             bindings = <
-&ESC_SL           &Q_SL           &W_SL         &E_SL          &R_SL          &T_SL                     &Y_SL          &U_SL      &I_SL      &O_SL      &P_SL     &rep_ht BACKSPACE 0
-&lt 8 TAB         &A_SL           &S_SL         &D_SL          &F_SL          &G_SL                     &H_SL          &mkp LCLK  &mkp MCLK  &mkp RCLK  &SEMI_SL  &del_ht DEL 0
+&kp ESC           &Q_SL           &W_SL         &E_SL          &R_SL          &T_SL                     &Y_SL          &U_SL      &I_SL      &O_SL      &P_SL     &kp BACKSPACE
+&lt 8 TAB         &A_SL           &S_SL         &D_SL          &F_SL          &G_SL                     &H_SL          &mkp LCLK  &mkp MCLK  &mkp RCLK  &SEMI_SL  &kp DEL
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &Z_SL         &X_SL          &C_SL          &V_SL                     &B_SL          &N_SL      &M_SL      &DOT_SL    &SLASH_SL &kp RIGHT_SHIFT
 &full_type_mode   &kp LEFT_WIN    &kp LEFT_ALT  &spc_lt 9 0    &spc_lt 5 0               &spc_lt 4 0    &spc_lt 7 0                                                &ent_lt 6 0
             >;
