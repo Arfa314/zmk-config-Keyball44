@@ -323,7 +323,7 @@ layers:
   - $
   - '%'
   - ^
-  - Sft+7
+  - '&AMP'
   - '*'
   - (
   - )
@@ -333,7 +333,7 @@ layers:
   - '"'
   - '{'
   - '}'
-  - '&AMP'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '[', s: '{'}
