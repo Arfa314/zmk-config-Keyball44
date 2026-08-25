@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: keyball44}
 layers:
   MOS+TYPE:
-  - '&ESC_SL'
+  - $$mdi:keyboard-esc$$
   - '&Q_SL'
   - '&W_SL'
   - '&E_SL'
@@ -12,7 +12,7 @@ layers:
   - '&I_SL'
   - '&O_SL'
   - '&P_SL'
-  - {t: '&BK_SL', h: '$$mdi:backspace$$'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
   - '&A_SL'
   - '&S_SL'
@@ -24,7 +24,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - '&SEMI_SL'
-  - {t: '&DEL_SL', h: '$$mdi:backspace-reverse-outline$$'}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - '&Z_SL'
